@@ -8,10 +8,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
 import android.app.Activity;
-import android.app.FragmentTransaction;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -61,7 +59,7 @@ import android.widget.AdapterView.OnItemClickListener;
  * This demo shows how various action bar display option flags can be combined and their effects.
  */
 public class ebookmain extends Activity
-        implements View.OnClickListener, ActionBar.TabListener {
+        implements View.OnClickListener {
     private View mCustomView;
     private static final String TAG = "ebookmain";
 
@@ -119,8 +117,8 @@ public class ebookmain extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-          requestWindowFeature(Window.FEATURE_ACTION_BAR); 
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//          requestWindowFeature(Window.FEATURE_ACTION_BAR); 
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
  //       setContentView(R.layout.action_bar_display_options);
         setContentView(R.layout.ebookmain);
  
@@ -188,46 +186,10 @@ public class ebookmain extends Activity
         mContext=this;
 
 
-//        findViewById(R.id.toggle_home_as_up).setOnClickListener(this);
-//        findViewById(R.id.toggle_show_home).setOnClickListener(this);
-//        findViewById(R.id.toggle_use_logo).setOnClickListener(this);
-//        findViewById(R.id.toggle_show_title).setOnClickListener(this);
-//        findViewById(R.id.toggle_show_custom).setOnClickListener(this);
-//        findViewById(R.id.toggle_navigation).setOnClickListener(this);
-//        findViewById(R.id.cycle_custom_gravity).setOnClickListener(this);
-
-        //hide button
-        //setAllButtonInVisible();
-        //hide home title 
-        //setHomeVisible();
-
-         //initial FBReader 
- 
 
 
 
-/*        findViewById(R.id.local_library).setOnClickListener(this);
-        findViewById(R.id.network_library).setOnClickListener(this);
-        findViewById(R.id.bookmark).setOnClickListener(this);
-        findViewById(R.id.settings).setOnClickListener(this);
-*/
-        //initial button
-        //initializeButton();
-        //show  button
-       // setAllButtonInVisible();
-        //hide home title 
-        //setHomeVisible();
 
-
-        mCustomView = getLayoutInflater().inflate(R.layout.action_bar_display_options_custom, null);
-        // Configure several action bar elements that will be toggled by display options.
-        final ActionBar bar = getActionBar();
-        bar.setCustomView(mCustomView,
-                new ActionBar.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-
-        bar.addTab(bar.newTab().setText("Tab 1").setTabListener(this));
-        bar.addTab(bar.newTab().setText("Tab 2").setTabListener(this));
-        bar.addTab(bar.newTab().setText("Tab 3").setTabListener(this));
       
         
         
@@ -267,7 +229,7 @@ public class ebookmain extends Activity
         return true;
     }
     public void onClick(View v) {
-        final ActionBar bar = getActionBar();
+/*        final ActionBar bar = getActionBar();
         int flags = 0;
         switch (v.getId()) {
             case R.id.toggle_home_as_up:
@@ -312,17 +274,10 @@ public class ebookmain extends Activity
         }
 
         int change = bar.getDisplayOptions() ^ flags;
-        bar.setDisplayOptions(change, flags);
+        bar.setDisplayOptions(change, flags);*/
     }
 
-    public void onTabSelected(Tab tab, FragmentTransaction ft) {
-    }
 
-    public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-    }
-
-    public void onTabReselected(Tab tab, FragmentTransaction ft) {
-    }
     private void initializeButton() {
  /*       
         mlocal = (Button)findViewById(R.id.local_library);

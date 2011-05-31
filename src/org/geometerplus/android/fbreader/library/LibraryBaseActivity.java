@@ -44,11 +44,8 @@ import java.io.FileInputStream;
 import android.app.Activity;
 import android.os.Bundle;
 
-
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
 import android.app.Activity;
-import android.app.FragmentTransaction;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;

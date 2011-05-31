@@ -37,10 +37,7 @@ import org.geometerplus.zlibrary.ui.android.application.ZLAndroidApplicationWind
 import android.util.Log;
 //sean_0517
 import java.io.FileInputStream;
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -64,7 +61,7 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 //import com.sean.android.ebookmain.CoverFlow;
 //sean_0517
-public abstract class ZLAndroidActivity extends Activity  implements View.OnClickListener, ActionBar.TabListener {
+public abstract class ZLAndroidActivity extends Activity  /*implements View.OnClickListener*/ {
        private static final String TAG = "ZLAndroidActivity";
 
 //sean_0517
@@ -133,8 +130,8 @@ public abstract class ZLAndroidActivity extends Activity  implements View.OnClic
 			myChangeCounter = state.getInt(ORIENTATION_CHANGE_COUNTER_KEY);
 		}
 
-        	 // requestWindowFeature(Window.FEATURE_NO_TITLE);
-               requestWindowFeature(Window.FEATURE_ACTION_BAR);
+        	  requestWindowFeature(Window.FEATURE_NO_TITLE);
+             //  requestWindowFeature(Window.FEATURE_ACTION_BAR);
 		if (ZLAndroidApplication.Instance().DisableButtonLightsOption.getValue()) {
 			disableButtonLight();
 		}
@@ -344,63 +341,8 @@ Log.v(TAG, "SEAN_LOG  onCreate 3 " );
 		}
 	};
 
-//sean_0517
-    public void onClick(View v) {
-        final ActionBar bar = getActionBar();
-        int flags = 0;
-        switch (v.getId()) {
-            case R.id.toggle_home_as_up:
-                flags = ActionBar.DISPLAY_HOME_AS_UP;
-                break;
-            case R.id.toggle_show_home:
-                flags = ActionBar.DISPLAY_SHOW_HOME;
-                break;
-            case R.id.toggle_use_logo:
-                flags = ActionBar.DISPLAY_USE_LOGO;
-                break;
-            case R.id.toggle_show_title:
-                flags = ActionBar.DISPLAY_SHOW_TITLE;
-                break;
-            case R.id.toggle_show_custom:
-                flags = ActionBar.DISPLAY_SHOW_CUSTOM;
-                break;
 
-            case R.id.toggle_navigation:
-                bar.setNavigationMode(
-                        bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_STANDARD
-                                ? ActionBar.NAVIGATION_MODE_TABS
-                                : ActionBar.NAVIGATION_MODE_STANDARD);
-                return;
-            case R.id.cycle_custom_gravity:
-                ActionBar.LayoutParams lp = (ActionBar.LayoutParams) mCustomView.getLayoutParams();
-                int newGravity = 0;
-                switch (lp.gravity & Gravity.HORIZONTAL_GRAVITY_MASK) {
-                    case Gravity.LEFT:
-                        newGravity = Gravity.CENTER_HORIZONTAL;
-                        break;
-                    case Gravity.CENTER_HORIZONTAL:
-                        newGravity = Gravity.RIGHT;
-                        break;
-                    case Gravity.RIGHT:
-                        newGravity = Gravity.LEFT;
-                        break;
-                }
-                lp.gravity = lp.gravity & ~Gravity.HORIZONTAL_GRAVITY_MASK | newGravity;
-                bar.setCustomView(mCustomView, lp);
-                return;
-        }
 
-        int change = bar.getDisplayOptions() ^ flags;
-        bar.setDisplayOptions(change, flags);
-    }
-    public void onTabSelected(Tab tab, FragmentTransaction ft) {
-    }
-
-    public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-    }
-
-    public void onTabReselected(Tab tab, FragmentTransaction ft) {
-    }
 
     
 }

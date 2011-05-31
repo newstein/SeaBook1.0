@@ -46,8 +46,8 @@ public class LibrarybytitleActivity extends LibraryBaseActivity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-//sean_0517     requestWindowFeature(Window.FEATURE_NO_TITLE);
-               requestWindowFeature(Window.FEATURE_ACTION_BAR);
+     requestWindowFeature(Window.FEATURE_NO_TITLE);
+//               requestWindowFeature(Window.FEATURE_ACTION_BAR);
 
         DatabaseInstance = SQLiteBooksDatabase.Instance();
         if (DatabaseInstance == null) {

@@ -48,10 +48,7 @@ import org.geometerplus.android.util.UIUtil;
 import android.util.Log;
 //sean_0517
 import java.io.FileInputStream;
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -77,7 +74,7 @@ import android.view.Window;
 //import com.sean.android.ebookmain.CoverFlow;
 
 //sean_0517
-public final class FBReader extends ZLAndroidActivity implements View.OnClickListener, ActionBar.TabListener     {
+public final class FBReader extends ZLAndroidActivity /*implements View.OnClickListener*/    {
 	public static final String BOOK_PATH_KEY = "BookPath";
         private static final String TAG = "FBReader";
 	final static int REPAINT_CODE = 1;
@@ -155,17 +152,7 @@ public final class FBReader extends ZLAndroidActivity implements View.OnClickLis
 		return super.onPrepareOptionsMenu(menu);
 	}
 
-	@Override
-    public void invalidateOptionsMenu() {
-        // TODO Auto-generated method stub
-        Log.v(TAG, "SEAN_LOG  invalidateOptionsMenu " ); 
-        final ZLAndroidApplication application = (ZLAndroidApplication)getApplication();
-        if (!application.ShowStatusBarOption.getValue() &&
-            application.ShowStatusBarWhenMenuIsActiveOption.getValue()) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-        }	    
-        super.invalidateOptionsMenu();
-    }
+
 
     @Override
 	public void onOptionsMenuClosed(Menu menu) {

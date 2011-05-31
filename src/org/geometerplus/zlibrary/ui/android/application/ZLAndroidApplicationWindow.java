@@ -62,7 +62,8 @@ public final class ZLAndroidApplicationWindow extends ZLApplicationWindow {
 		if (iconId != null) {
 			menuItem.setIcon(iconId);
   
-                     menuItem.setShowAsAction(SHOW_AS_ACTION_ALWAYS); //always
+                    // menuItem.setShowAsAction(SHOW_AS_ACTION_ALWAYS); //always
+                    
     
 		}
            //sean_0517
