@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/show_library"
+        android:icon="@drawable/ic_menu_library"
+        android:showAsAction="always" />
+    <item
+        android:id="@+id/network_library"
+        android:icon="@drawable/ic_menu_networklibrary"
+        android:showAsAction="always" />
+ <!--       
+     <item
+        android:id="@+id/show_bookmark"
+        android:icon="@drawable/ic_menu_bookmarks"
+        android:showAsAction="always" />
+    <item
+        android:id="@+id/show_night"
+        android:icon="@drawable/ic_menu_night"
+        android:showAsAction="always" />   
+    <item
+        android:id="@+id/show_day"
+        android:icon="@drawable/ic_menu_day"
+        android:showAsAction="always" />   
+     <item
+        android:id="@+id/show_search"
+        android:icon="@drawable/ic_menu_search"
+        android:showAsAction="always" /> 
+       
+      <item
+        android:id="@+id/show_preference"
+        android:icon="@drawable/ic_popup_settings"
+        android:showAsAction="always" />  
+        
+       <item
+        android:id="@+id/show_zoomin"
+        android:title="@string/showzoomin"
+        android:icon="@drawable/ic_bookmark_off_holo_dark"
+        android:showAsAction="always|withText" />               
+       <item
+        android:id="@+id/show_zoomout"
+        android:title="@string/showzoomout"
+        android:icon="@drawable/ic_bookmark_off_holo_dark"
+        android:showAsAction="always|withText" /> 
+        <item
+        android:id="@+id/show_navi"
+        android:title="@string/shownavi"
+        android:icon="@drawable/ic_bookmark_off_holo_dark"
+        android:showAsAction="always|withText" />                                                            
+    <item
+        android:id="@+id/show_toc"
+        android:title="@string/showtoc"/>
+    <item
+        android:id="@+id/show_bookinfo"
+        android:title="@string/show_bookinfo"/>
+     <item
+        android:id="@+id/increase_font"
+        android:title="@string/increasefont"/>
+    <item
+        android:id="@+id/decrease_font"
+        android:title="@string/decreasefont"/>    
+  -->                    
+</menu>

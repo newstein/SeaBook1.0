@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="empty_string"/>
+    <string name="action_bar_display_options">App/Action Bar/Display Options</string>
+    <string name="toggle_home_as_up">DISPLAY_HOME_AS_UP</string>
+    <string name="toggle_show_home">DISPLAY_SHOW_HOME</string>
+    <string name="toggle_use_logo">DISPLAY_USE_LOGO</string>
+    <string name="toggle_show_title">DISPLAY_SHOW_TITLE</string>
+    <string name="toggle_show_custom">DISPLAY_SHOW_CUSTOM</string>
+    <string name="toggle_navigation">Navigation</string>
+    <string name="cycle_custom_gravity">Cycle Custom View Gravity</string>
+    <string name="display_options_custom_button">Custom View!</string>
+    <string name="display_options_menu_item">Menu Item</string>
+    <string name="local_library">Local Library</string>
+    <string name="network_library">Network Library</string>
+    <string name="bookmark">BookMark</string>
+    <string name="FBReader">FBReader</string>
+    <string name="settings">Setting</string>
+    <string name="showzoomin">zoomin</string>
+    <string name="showzoomout">zoomout</string>
+    <string name="shownavi">navi</string>
+    <string name="showtoc">TOC</string>
+    <string name="show_bookinfo">book info</string>
+    <string name="increasefont">increase font</string>
+    <string name="decreasefont">decrease font</string>
+    <string name="test1">test1</string>
+    <string name="test2">test2</string>
+    <string name="test3">test3</string>
+    <string name="test4">test4</string>
+    <string name="test5">test5</string>
+    <string name="test6">test6</string>
+</resources>
