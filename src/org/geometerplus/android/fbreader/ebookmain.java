@@ -135,6 +135,8 @@ public class ebookmain extends Activity
 
         textview = (TextView)findViewById(R.id.TextView01);
         imageView = (ImageView)findViewById(R.id.ImageView01);
+        textview.setText("Sea Reader Main");  
+        imageView.setImageResource(mImageIds_main[3]);
         
         coverFlow.setOnItemClickListener(new CoverAdapterView.OnItemClickListener() {
 
