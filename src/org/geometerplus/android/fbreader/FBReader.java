@@ -87,7 +87,7 @@ public final class FBReader extends ZLAndroidActivity /*implements View.OnClickL
 
 
 
-//    private FBReaderApp fbReader ;
+    private FBReaderApp fbReader ;
 
 	@Override
 	protected ZLFile fileFromIntent(Intent intent) {
@@ -110,8 +110,8 @@ public final class FBReader extends ZLAndroidActivity /*implements View.OnClickL
 			application.ShowStatusBarOption.getValue() ? 0 : WindowManager.LayoutParams.FLAG_FULLSCREEN;
 		  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, myFullScreenFlag);
 
-		final FBReaderApp fbReader = (FBReaderApp)FBReaderApp.Instance();
-		//fbReader = (FBReaderApp)FBReaderApp.Instance();
+//		final FBReaderApp fbReader = (FBReaderApp)FBReaderApp.Instance();
+		fbReader = (FBReaderApp)FBReaderApp.Instance();
 		if (ourTextSearchPanel == null) {
 			ourTextSearchPanel = new TextSearchButtonPanel(fbReader);
 		}

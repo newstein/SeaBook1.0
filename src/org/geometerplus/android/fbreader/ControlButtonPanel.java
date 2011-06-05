@@ -28,11 +28,12 @@ import org.geometerplus.zlibrary.core.application.ZLApplication;
 import org.geometerplus.zlibrary.text.view.ZLTextWordCursor;
 
 import org.geometerplus.fbreader.fbreader.FBReaderApp;
+import org.geometerplus.fbreader.fbreader.*;
 
 abstract class ControlButtonPanel implements ZLApplication.ButtonPanel {
 	public final FBReaderApp Reader;
 	public ZLTextWordCursor StartPosition;
-
+	public  FBReader myActivity;
 	private boolean myVisible;
 
 	protected ControlPanel myControlPanel;
@@ -141,9 +142,9 @@ abstract class ControlButtonPanel implements ZLApplication.ButtonPanel {
 			myControlPanel.hide(animate);
 		}
 	}
-
+	
+	
 	public abstract void createControlPanel(FBReader activity, RelativeLayout root);
-
 	// callback methods
 	public void onShow() {}
 	public void onHide() {}

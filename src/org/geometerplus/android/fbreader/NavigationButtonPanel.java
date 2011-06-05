@@ -24,7 +24,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
+import android.util.Log;
 import org.geometerplus.zlibrary.core.resources.ZLResource;
 
 import org.geometerplus.zlibrary.text.view.ZLTextView;
@@ -36,12 +36,17 @@ import org.geometerplus.fbreader.fbreader.FBReaderApp;
 
 final class NavigationButtonPanel extends ControlButtonPanel {
 	private volatile boolean myIsInProgress;
-
+	private static final String TAG = "NavigationButtonPanel";
+	
+//	private FBReader myActivity;
+	
 	NavigationButtonPanel(FBReaderApp fbReader) {
 		super(fbReader);
+	
 	}
 
 	public void runNavigation() {
+		
 		if (!getVisibility()) {
 			myIsInProgress = false;
 			initPosition();
@@ -65,7 +70,9 @@ final class NavigationButtonPanel extends ControlButtonPanel {
 	}
 
 	@Override
-	public void createControlPanel(FBReader activity, RelativeLayout root) {
+	public void createControlPanel( FBReader activity, RelativeLayout root) {
+		Log.v(TAG, "SEAN_LOG  createControlPanel " ); 
+		myActivity=activity; 
 		myControlPanel = new ControlPanel(activity, root, true);
 
 		final View layout = activity.getLayoutInflater().inflate(R.layout.navigate, myControlPanel, false);
@@ -105,17 +112,13 @@ final class NavigationButtonPanel extends ControlButtonPanel {
 
 		final Button btnOk = (Button)layout.findViewById(android.R.id.button1);
 		final Button btnCancel = (Button)layout.findViewById(android.R.id.button3);
-//sean_0519
-/*
-		final Button btnMenu1 = (Button)layout.findViewById(R.id.menu1);
-		final Button btnMenu2 = (Button)layout.findViewById(R.id.menu2);
-		final Button btnMenu3 = (Button)layout.findViewById(R.id.menu3);
-		final Button btnMenu4 = (Button)layout.findViewById(R.id.menu4);    
-		btnMenu1.setOnClickListener(listener);
-		btnMenu2.setOnClickListener(listener);
-		btnMenu3.setOnClickListener(listener);
-		btnMenu4.setOnClickListener(listener);
- */       
+
+//		final Button btnMenu1 = (Button)layout.findViewById(R.id.menu1);
+//		final Button btnMenu2 = (Button)layout.findViewById(R.id.menu2);
+ 
+
+
+      
 		View.OnClickListener listener = new View.OnClickListener() {
 			public void onClick(View v) {
 				final ZLTextWordCursor position = StartPosition;
@@ -124,29 +127,32 @@ final class NavigationButtonPanel extends ControlButtonPanel {
 				} else if (v == btnOk) {
 					storePosition();
 				}
+/*else if (v == btnMenu1) {
+					Log.v(TAG, "SEAN_LOG  btnMenu1 " ); 
+					onclickLocalLibrary();
+				}else if (v == btnMenu2) {
+					Log.v(TAG, "SEAN_LOG  btnMenu2 " ); 
+					onclickNetworkLibrary();
+				}
+*/				
+				
+				
 				StartPosition = null;
 				hide(true);
 			}
 		};
 		btnOk.setOnClickListener(listener);
 		btnCancel.setOnClickListener(listener);
-//sean_0519
-/*
-		btnMenu1.setOnClickListener(listener);
-		btnMenu2.setOnClickListener(listener);
-		btnMenu3.setOnClickListener(listener);
-		btnMenu4.setOnClickListener(listener);
-*/
+		
+//		btnMenu1.setOnClickListener(listener);
+//		btnMenu2.setOnClickListener(listener);
         
 		final ZLResource buttonResource = ZLResource.resource("dialog").getResource("button");
 		btnOk.setText(buttonResource.getResource("ok").getValue());
 		btnCancel.setText(buttonResource.getResource("cancel").getValue());
-//sean_0519    
 /*
-		btnMenu1.setText("Day/Night");
-		btnMenu2.setText("Font Increase");
-		btnMenu3.setText("Font Decrease");
-		btnMenu4.setText("Settings");
+		btnMenu1.setText("Local Library");
+		btnMenu2.setText("Network Library");
 */
 
 

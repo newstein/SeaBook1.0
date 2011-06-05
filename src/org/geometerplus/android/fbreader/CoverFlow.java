@@ -64,6 +64,7 @@ import org.geometerplus.android.fbreader.network.NetworkLibraryActivity;
 
 import android.app.Activity;
 import android.content.Context;
+import com.sean.bookcase.*;
 
 
 /**
@@ -1163,23 +1164,28 @@ public class CoverFlow extends CoverAbsSpinner implements GestureDetector.OnGest
                 break;
             case 4:
                 Log.v(TAG, "SEAN_LOG  LibraryRecentActivity id "+id );  
-                Intent intent4 = new Intent(mContext, LibraryRecentActivity.class);
+                Intent intent4 = new Intent(mContext, BookCaseIntro.class);
                 mContext.startActivity(intent4); 
-                break;
+                break;                
             case 5:
-                Log.v(TAG, "SEAN_LOG  LibrarybytagActivity id "+id );  
-                Intent intent5 = new Intent(mContext, LibrarybytagActivity.class);
+                Log.v(TAG, "SEAN_LOG  LibraryRecentActivity id "+id );  
+                Intent intent5 = new Intent(mContext, LibraryRecentActivity.class);
                 mContext.startActivity(intent5); 
                 break;
             case 6:
-                Log.v(TAG, "SEAN_LOG  LibraryfiletreeActivity id "+id );  
-                Intent intent6 = new Intent(mContext, LibraryfiletreeActivity.class);
+                Log.v(TAG, "SEAN_LOG  LibrarybytagActivity id "+id );  
+                Intent intent6 = new Intent(mContext, LibrarybytagActivity.class);
                 mContext.startActivity(intent6); 
                 break;
             case 7:
-                Log.v(TAG, "SEAN_LOG  LibraryFavoritess id "+id );  
-                Intent intent7 = new Intent(mContext, NetworkLibraryActivity.class);
+                Log.v(TAG, "SEAN_LOG  LibraryfiletreeActivity id "+id );  
+                Intent intent7 = new Intent(mContext, LibraryfiletreeActivity.class);
                 mContext.startActivity(intent7); 
+                break;
+            case 8:
+                Log.v(TAG, "SEAN_LOG  LibraryFavoritess id "+id );  
+                Intent intent8 = new Intent(mContext, NetworkLibraryActivity.class);
+                mContext.startActivity(intent8); 
                 break;               
             default:
                 Log.v(TAG, "SEAN_LOG  default id "+id );          

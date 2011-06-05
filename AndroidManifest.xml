@@ -261,5 +261,29 @@
 		</activity>
 		<receiver android:name="org.geometerplus.android.fbreader.network.BookDownloaderCallback" android:process=":networkLibrary" />
 		<service android:name="org.geometerplus.android.fbreader.network.LibraryInitializationService" android:process=":networkLibrary" />
+
+        <activity android:name="com.sean.bookcase.BookCaseIntro"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar">
+
+        </activity>
+
+        <activity android:name="com.sean.bookcase.BookCaseList"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.sean.bookcase.BookCaseAllBook"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+				<action android:name="com.sean.bookcase.BookCaseAllBook" />
+            </intent-filter>
+        </activity>
+
+
 	</application>
 </manifest>
