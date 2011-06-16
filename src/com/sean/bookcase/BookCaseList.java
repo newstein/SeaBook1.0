@@ -184,7 +184,7 @@ public class BookCaseList extends Activity {
           }
           if (myMetrics.widthPixels > 480) {
               
-              layoutParamsX = 80;    
+              layoutParamsX = 128;    
           }
              
           return layoutParamsX;
