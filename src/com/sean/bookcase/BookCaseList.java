@@ -29,9 +29,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.util.Log;
 
 public class BookCaseList extends Activity {
-
+    private static final String TAG = "BookCaseList";
 	private Intent myListIntent;
 	private List<ResolveInfo> myBookApps;
 	private GridView myGridView;
@@ -113,10 +114,14 @@ public class BookCaseList extends Activity {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View myView;
 
-			final DisplayMetrics myMetrics = getResources().getDisplayMetrics();
-			int layoutParamsX = (96*myMetrics.widthPixels/480);
-			int layoutParamsY = (130*myMetrics.heightPixels/320);
 
+			final DisplayMetrics myMetrics = getResources().getDisplayMetrics();
+			Log.v(TAG, "SEAN_LOG position=" + position ); 
+//			int layoutParamsX = (96*myMetrics.widthPixels/480);
+//			int layoutParamsY = (130*myMetrics.heightPixels/320);
+            int layoutParamsX = getCountX();
+            int layoutParamsY = getCountY();
+            Log.v(TAG, "SEAN_LOG X=" + layoutParamsX +"Y="+layoutParamsY); 
 			// å ���ø����̼� ���� ��������.
 			if(position < myBookApps.size()) {
 				if (convertView == null) {
@@ -166,14 +171,64 @@ public class BookCaseList extends Activity {
 
 			return myView;
 		}
+        public  int getCountX() {
+            final DisplayMetrics myMetrics = getResources().getDisplayMetrics();
+          int layoutParamsX = 0;
+ 
+        
+          if (myMetrics.widthPixels == 480) {
+              layoutParamsX = 96;
+          }
+          if (myMetrics.widthPixels == 320) {
+              layoutParamsX = 80;
+          }
+          if (myMetrics.widthPixels > 480) {
+              
+              layoutParamsX = 80;    
+          }
+             
+          return layoutParamsX;
+        }
+        public int getCountY() {
+            final DisplayMetrics myMetrics = getResources().getDisplayMetrics();
+          int layoutParamsY = 0;
+          
+          if (myMetrics.heightPixels == 480) {
+              layoutParamsY = 96;
+          }
+          if (myMetrics.heightPixels == 320) {
+              layoutParamsY = 130;
+          }         
+          if(myMetrics.heightPixels==1280)
+          {
+              layoutParamsY = 128;
+                  
+          }
+          if(myMetrics.heightPixels==768)
+          {
+              layoutParamsY = 128;
+                  
+          }          
 
+          
+          return layoutParamsY;
+        }		
+		
+		
 		public final int getCount() {
-			int bookNum =  myBookApps.size();
-			int line = (bookNum/5)+1;
-			if (line == 1)
-				return 10;
-			else
-				return line*5;
+		    final DisplayMetrics myMetrics = getResources().getDisplayMetrics();
+          int layoutParamsX = (myMetrics.widthPixels/96);
+          int layoutParamsY = (myMetrics.heightPixels/130);
+          
+          int Xcount=getCountX();
+          int Ycount=getCountY();
+          return Xcount*Ycount;
+//			int bookNum =  myBookApps.size();
+//			int line = (bookNum/5)+1;
+//			if (line == 1)
+//				return 10;
+//			else
+//				return line*5;
 		}
 
 		public final Object getItem(int position) {

@@ -46,6 +46,6 @@
         android:columnWidth="96dp"
         android:stretchMode="columnWidth"    
         android:gravity="center"
-        />
+        /> 
 
 </LinearLayout>
