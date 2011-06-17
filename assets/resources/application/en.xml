@@ -33,8 +33,8 @@
 		<node name="fileTreeCard" value="Memory card">
 			<node name="summary" value="Memory card inserted into the device"/>
 		</node>
-		<node name="fileTreeLibrary" value="FBReader library">
-			<node name="summary" value="FBReader books directory"/>
+		<node name="fileTreeLibrary" value="SeaBook1.0 library">
+			<node name="summary" value="SeaBook1.0 books directory"/>
 		</node>
 		<node name="menu">
 			<node name="localSearch" value="Local search"/>
