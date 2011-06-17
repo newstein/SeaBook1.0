@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink"><description><title-info><author><last-name>FBReader</last-name></author> <book-title>About FBReaderJ</book-title> <lang>en</lang></title-info></description>
+<FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink"><description><title-info><author><last-name>SeaBook1.0</last-name></author> <book-title>About SeaBook1.0</book-title> <lang>en</lang></title-info></description>
 <body>
 <title><p>About SeaBook &FBReaderVersion;</p></title>
 <p>SeaBook is an e-book reader. SeaBook supports <code>ePub</code> and <code>fb2</code> file formats. Please note that DRM-protected books are not supported. If you have any files in supported formats, just put them into <code>Books</code> directory on the memory card. The books will be available in <a l:href="fbreader-action://library">the library</a>. <a l:href="fbreader-action://networkLibrary">Network library</a> contains a large set of e-books you can download for free or for a fee.</p>

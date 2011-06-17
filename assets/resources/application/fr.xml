@@ -183,7 +183,7 @@
 		<node name="returnTo" value="Retourner à..."/>
 		<node name="back" value="Retour"/>
 		<node name="forward" value="Suivant"/>
-		<node name="close" value="Fermer FBReader"/>
+		<node name="close" value="Fermer SeaBook1.0"/>
 	</node>
 	<node name="menu">
 		<node name="preferences" value="Paramètres"/>

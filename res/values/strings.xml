@@ -14,7 +14,7 @@
     <string name="local_library">Local Library</string>
     <string name="network_library">Network Library</string>
     <string name="bookmark">BookMark</string>
-    <string name="FBReader">FBReader</string>
+    <string name="FBReader">SeaBook1.0</string>
     <string name="settings">Setting</string>
     <string name="showzoomin">zoomin</string>
     <string name="showzoomout">zoomout</string>
@@ -29,9 +29,9 @@
     <string name="test4">test4</string>
     <string name="test5">test5</string>
     <string name="test6">test6</string>
-    <string name="app_name">BookCase</string>    
+    <string name="app_name">BookCase</string>
     <string name="intro">전래동화 전집</string>
     <string name="list_title">Story Book 전집</string>
     <string name="info_ok">OK</string>
-    <string name="allbook_list_title">전래 동화 전집 보기</string>    
+    <string name="allbook_list_title">전래 동화 전집 보기</string>
 </resources>

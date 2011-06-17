@@ -180,7 +180,7 @@
 		<node name="returnTo" value="กลับไป ..."/>
 		<node name="back" value="Back" toBeTranslated="true"/>
 		<node name="forward" value="Forward" toBeTranslated="true"/>
-		<node name="close" value="ปิด FBReader"/>
+		<node name="close" value="ปิด SeaBook1.0"/>
 	</node>
 	<node name="menu">
 		<node name="preferences" value="การตั้งค่า"/>

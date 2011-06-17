@@ -184,7 +184,7 @@
 		<node name="returnTo" value="Vrátit se na..."/>
 		<node name="back" value="Zpět"/>
 		<node name="forward" value="Vpřed"/>
-		<node name="close" value="Zavřít FBReader"/>
+		<node name="close" value="Zavřít SeaBook1.0"/>
 	</node>
 	<node name="menu">
 		<node name="preferences" value="Nastavení"/>

@@ -179,7 +179,7 @@
 		<node name="returnTo" value="Вернуться к ..."/>
 		<node name="back" value="Назад"/>
 		<node name="forward" value="Вперед"/>
-		<node name="close" value="Закрыть FBReader"/>
+		<node name="close" value="Закрыть SeaBook1.0"/>
 	</node>
 	<node name="menu">
 		<node name="preferences" value="Настройки"/>

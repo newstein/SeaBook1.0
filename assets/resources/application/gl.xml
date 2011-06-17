@@ -180,7 +180,7 @@
 		<node name="returnTo" value="Return to ..."/>
 		<node name="back" value="Back" toBeTranslated="true"/>
 		<node name="forward" value="Forward" toBeTranslated="true"/>
-		<node name="close" value="Close FBReader"/>
+		<node name="close" value="Close SeaBook1.0"/>
 	</node>
 	<node name="menu">
 		<node name="preferences" value="Preferencias"/>
